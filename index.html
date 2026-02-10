@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Debashish Kar | PhD (CSE) Portfolio</title>
+  <meta name="description" content="PhD-focused CSE portfolio: research themes, publications, projects, and CV." />
+  <style>
+    :root{
+      --bg:#0b0f17; --panel:#111827; --panel2:#0f172a;
+      --text:#e5e7eb; --muted:#9ca3af; --line:#243044;
+      --accent:#93c5fd; --accent2:#a7f3d0;
+      --max: 980px; --r: 14px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+      background: radial-gradient(1200px 700px at 30% -10%, #1b2b5a 0%, var(--bg) 60%), var(--bg);
+      color:var(--text); line-height:1.55;
+    }
+    a{color:var(--accent); text-decoration:none}
+    a:hover{text-decoration:underline}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 80px}
+    header{
+      display:flex; flex-wrap:wrap; gap:18px; align-items:flex-start;
+      padding:22px; background: linear-gradient(180deg, rgba(17,24,39,.95), rgba(15,23,42,.75));
+      border:1px solid var(--line); border-radius: var(--r);
+      box-shadow: 0 10px 30px rgba(0,0,0,.35);
+    }
+    .name{font-size:28px; font-weight:800; letter-spacing:.2px}
+    .tag{color:var(--muted); margin-top:4px}
+    .pillrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:14px}
+    .pill{
+      border:1px solid var(--line); background:rgba(255,255,255,.03);
+      padding:7px 10px; border-radius:999px; color:var(--text); font-size:13px;
+    }
+    nav{
+      margin:18px 0 0; display:flex; flex-wrap:wrap; gap:10px;
+    }
+    nav a{
+      display:inline-block; padding:8px 10px; border-radius:10px;
+      border:1px solid var(--line); background:rgba(255,255,255,.03); color:var(--text);
+      font-size:14px;
+    }
+    nav a:hover{background:rgba(255,255,255,.06); text-decoration:none}
+    section{margin-top:18px}
+    h2{
+      margin:0 0 10px; font-size:18px; letter-spacing:.2px;
+      display:flex; gap:10px; align-items:center;
+    }
+    .card{
+      padding:18px; border:1px solid var(--line); border-radius:var(--r);
+      background: linear-gradient(180deg, rgba(17,24,39,.9), rgba(15,23,42,.75));
+    }
+    .grid{display:grid; gap:14px}
+    @media(min-width:840px){ .grid.cols2{grid-template-columns:1fr 1fr} }
+    .muted{color:var(--muted)}
+    .k{color:var(--accent2)}
+    .list{margin:10px 0 0; padding-left:18px}
+    .list li{margin:6px 0}
+    .item{
+      padding:14px; border:1px solid var(--line); border-radius:12px;
+      background:rgba(255,255,255,.03);
+    }
+    .item h3{margin:0 0 6px; font-size:16px}
+    .meta{font-size:13px; color:var(--muted)}
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{
+      font-size:12px; color:var(--muted);
+      border:1px solid rgba(36,48,68,.9);
+      background: rgba(255,255,255,.02);
+      padding:5px 8px; border-radius:999px;
+    }
+    .btnrow{display:flex; flex-wrap:wrap; gap:10px; margin-top:12px}
+    .btn{
+      display:inline-flex; gap:8px; align-items:center; justify-content:center;
+      padding:10px 12px; border-radius:12px; border:1px solid var(--line);
+      background: rgba(147,197,253,.12); color:var(--text);
+      font-size:14px;
+    }
+    .btn.secondary{background:rgba(167,243,208,.10)}
+    .btn.ghost{background:rgba(255,255,255,.03)}
+    footer{margin-top:22px; color:var(--muted); font-size:13px}
+    .hr{height:1px; background:var(--line); margin:14px 0}
+    .small{font-size:13px}
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header id="top">
+      <div style="flex:1 1 520px;">
+        <div class="name">Debashish Kar</div>
+        <div class="tag">
+          PhD Applicant (CSE) • ML for Sensing + AI Systems • Full-stack engineering for research prototypes
+        </div>
+
+        <div class="pillrow">
+          <span class="pill">Research: remote sensing, hyperspectral imaging, wearables</span>
+          <span class="pill">Systems: observability, real-time pipelines, reproducibility</span>
+          <span class="pill">Stack: Python, PyTorch, TypeScript, Next.js, Fastify</span>
+        </div>
+
+        <div class="btnrow">
+          <a class="btn" href="https://github.com/kardebkar" target="_blank" rel="noopener">GitHub</a>
+          <a class="btn secondary" href="#" target="_blank" rel="noopener">Google Scholar</a>
+          <a class="btn ghost" href="#" target="_blank" rel="noopener">CV (PDF)</a>
+          <a class="btn ghost" href="mailto:debashishkar8@gmail.com">Email</a>
+        </div>
+
+        <nav aria-label="Primary">
+          <a href="#research">Research</a>
+          <a href="#publications">Publications</a>
+          <a href="#projects">Projects</a>
+          <a href="#experience">Experience</a>
+          <a href="#skills">Skills</a>
+          <a href="#contact">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="card" aria-label="Quick overview">
+      <h2>Overview</h2>
+      <div class="muted">
+        I build end-to-end ML systems for sensing: from data pipelines and model training to evaluation, deployment
+        workflows, and observability. My recent work spans hyperspectral imaging for agriculture and wearable sensing
+        for human activity recognition, with a strong emphasis on making research prototypes reliable, reproducible, and
+        demoable.
+      </div>
+    </section>
+
+    <section id="research" class="grid cols2">
+      <div class="card">
+        <h2>Research themes</h2>
+        <div class="item">
+          <h3>1) ML for Remote Sensing & Hyperspectral Imaging</h3>
+          <div class="meta">Anomaly detection, diagnosis, and decision support for agricultural and environmental monitoring.</div>
+          <div class="chips">
+            <span class="chip">hyperspectral</span><span class="chip">anomaly detection</span>
+            <span class="chip">generative models</span><span class="chip">active sensing</span>
+          </div>
+        </div>
+        <div class="item" style="margin-top:12px;">
+          <h3>2) Wearable Sensing & Human Activity Recognition</h3>
+          <div class="meta">Streaming sensor pipelines + model baselines with real-world constraints (latency, noise, missingness).</div>
+          <div class="chips">
+            <span class="chip">HAR</span><span class="chip">time series</span>
+            <span class="chip">edge / streaming</span><span class="chip">evaluation</span>
+          </div>
+        </div>
+        <div class="item" style="margin-top:12px;">
+          <h3>3) AI Systems: Experimentation, Deployment, Observability</h3>
+          <div class="meta">Tooling and UX for runs/experiments, rollouts, incidents, logs/metrics/traces.</div>
+          <div class="chips">
+            <span class="chip">MLOps</span><span class="chip">observability</span>
+            <span class="chip">reproducibility</span><span class="chip">real-time systems</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>PhD focus statement</h2>
+        <div class="muted">
+          I am seeking a PhD in Computer Science / Computer Engineering (CSE) focused on reliable ML systems for
+          sensing applications. My goal is to develop methods and systems that improve robustness, interpretability,
+          and deployment-readiness of models operating under real-world constraints (domain shift, noisy sensors, limited labels).
+        </div>
+        <div class="hr"></div>
+        <div class="small muted">
+          Customize this paragraph to each lab by adding:
+          <span class="k">1–2 faculty names</span>, the <span class="k">specific problem</span> you want to pursue,
+          and which <span class="k">project evidence</span> best supports your fit.
+        </div>
+      </div>
+    </section>
+
+    <section id="publications" class="card">
+      <h2>Publications (selected)</h2>
+      <div class="muted small">Replace “Link” placeholders with DOI/publisher links and add PDF links if allowed.</div>
+      <ul class="list">
+        <li>
+          <strong>Hybrid Deep Learning approach for skin disease classification using adaptive segmentation and dual-stage EfficientNet</strong>,
+          IEEE ICDSINC (accepted, 2025). <a href="#" target="_blank" rel="noopener">Link</a>
+        </li>
+        <li>
+          <strong>Leveraging artificial intelligence and advanced food processing techniques for enhanced food safety, quality, and security: a comprehensive review</strong>,
+          Discover Applied Sciences (2025). <a href="#" target="_blank" rel="noopener">Link</a>
+        </li>
+        <li>
+          <strong>Transforming Agricultural Productivity with AI-Driven Forecasting: Innovations in Food Security and Supply Chain Optimization</strong>,
+          MDPI Forecasting (2024). <a href="#" target="_blank" rel="noopener">Link</a>
+        </li>
+        <li>
+          <strong>Advancing food security through drone-based hyperspectral imaging: applications in precision agriculture and post-harvest management</strong>,
+          Environmental Monitoring and Assessment (2025). <a href="#" target="_blank" rel="noopener">Link</a>
+        </li>
+        <li>
+          <strong>Rising Above the Flood: A Decision Tool for Structural Safety</strong>,
+          Domestic Preparedness Journal (Jan 2024). <a href="#" target="_blank" rel="noopener">Link</a>
+        </li>
+      </ul>
+    </section>
+
+    <section id="projects" class="card">
+      <h2>Selected projects</h2>
+      <div class="grid cols2" style="margin-top:12px;">
+        <div class="item">
+          <h3>Agentic Hyperspectral Analyst</h3>
+          <div class="meta">Multi-stage agent workflow for hyperspectral analysis: anomaly detection, diagnosis, and sensing decisions.</div>
+          <div class="chips">
+            <span class="chip">VAE</span><span class="chip">RL</span><span class="chip">cGAN</span><span class="chip">remote sensing</span>
+          </div>
+          <div class="btnrow">
+            <a class="btn" href="https://github.com/kardebkar/Agentic-Hyperspectral-Analyst" target="_blank" rel="noopener">Repo</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Project page</a>
+          </div>
+          <div class="small muted" style="margin-top:10px;">
+            Add: dataset used, evaluation metrics, ablations, and a 1–2 figure “method overview”.
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Wrist2Avatar (Human Activity Recognition)</h3>
+          <div class="meta">Wearable sensing pipeline + baselines; streaming Apple Watch data to downstream applications.</div>
+          <div class="chips">
+            <span class="chip">time series</span><span class="chip">HAR</span><span class="chip">streaming</span><span class="chip">mobile</span>
+          </div>
+          <div class="btnrow">
+            <a class="btn" href="https://github.com/kardebkar/Human-Activity-Recongnition" target="_blank" rel="noopener">Repo</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Demo video</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>AI Infra Studio</h3>
+          <div class="meta">Synthetic “internal AI platform” demo: experiments, observability, deployments, and traces.</div>
+          <div class="chips">
+            <span class="chip">Next.js</span><span class="chip">Fastify</span><span class="chip">WebSockets</span><span class="chip">observability</span>
+          </div>
+          <div class="btnrow">
+            <a class="btn" href="https://github.com/kardebkar/AI-Infra-studio" target="_blank" rel="noopener">Repo</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Screenshots</a>
+          </div>
+        </div>
+
+        <div class="item">
+          <h3>Real-time Auction Platform</h3>
+          <div class="meta">Real-time web + mobile system engineering; useful as systems evidence alongside research projects.</div>
+          <div class="chips">
+            <span class="chip">real-time</span><span class="chip">GraphQL</span><span class="chip">web</span><span class="chip">mobile</span>
+          </div>
+          <div class="btnrow">
+            <a class="btn" href="https://github.com/kardebkar/real-time-auction-platform" target="_blank" rel="noopener">Repo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="experience" class="grid cols2">
+      <div class="card">
+        <h2>Experience</h2>
+        <div class="item">
+          <h3>Texas A&M AgriLife Research</h3>
+          <div class="meta">Full Stack Developer • Jan 2024 – Present</div>
+          <ul class="list">
+            <li>React UI improvements and integrations for agricultural IoT platforms.</li>
+            <li>Real-time, data-driven tooling for precision farming workflows.</li>
+            <li>Team workflow improvements via Azure DevOps integration.</li>
+          </ul>
+        </div>
+        <div class="item" style="margin-top:12px;">
+          <h3>University of Texas at Arlington</h3>
+          <div class="meta">Graduate Research Assistant • Apr 2022 – Feb 2023</div>
+          <ul class="list">
+            <li>Developed Home Elevation Decision Tool for structural safety assessment and data collection.</li>
+            <li>UI/UX-centric system design for NSF and TxDOT projects.</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="card" id="skills">
+        <h2>Skills</h2>
+        <div class="grid" style="grid-template-columns:1fr; gap:10px;">
+          <div class="item">
+            <strong>Research / ML:</strong>
+            <div class="muted">Deep Learning, Time Series, Remote Sensing, Hyperspectral Imaging, HAR, RL, Generative Models, Experimentation</div>
+          </div>
+          <div class="item">
+            <strong>Programming:</strong>
+            <div class="muted">Python, C/C++, Java, TypeScript/JavaScript, Bash</div>
+          </div>
+          <div class="item">
+            <strong>Systems:</strong>
+            <div class="muted">APIs, WebSockets, Observability (logs/metrics/traces), Monorepos, Cloud basics</div>
+          </div>
+          <div class="item">
+            <strong>Tools:</strong>
+            <div class="muted">Git/GitHub, Playwright, Postman, VS Code, Azure DevOps</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Contact</h2>
+      <div class="grid cols2">
+        <div class="item">
+          <div><strong>Email:</strong> <a href="mailto:debashishkar8@gmail.com">debashishkar8@gmail.com</a></div>
+          <div><strong>GitHub:</strong> <a href="https://github.com/kardebkar" target="_blank" rel="noopener">github.com/kardebkar</a></div>
+          <div><strong>LinkedIn:</strong> <a href="#" target="_blank" rel="noopener">Add your LinkedIn link</a></div>
+          <div><strong>Google Scholar:</strong> <a href="#" target="_blank" rel="noopener">Add your Scholar link</a></div>
+        </div>
+        <div class="item">
+          <strong>Statement of purpose / research statement</strong>
+          <div class="muted" style="margin-top:6px;">
+            Add a short PDF or a page summarizing:
+            problem → approach → evidence → why this lab.
+          </div>
+          <div class="btnrow">
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Research Statement (PDF)</a>
+            <a class="btn ghost" href="#" target="_blank" rel="noopener">Statement of Purpose (PDF)</a>
+          </div>
+        </div>
+      </div>
+      <div class="hr"></div>
+      <div class="small muted">
+        Tip: keep this site minimal, then add 1 strong figure per flagship project (method diagram + key result table).
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="y"></span> Debashish Kar • Built as a single static HTML file for GitHub Pages.</div>
+      <div class="small">Last updated: <span id="d"></span></div>
+    </footer>
+  </div>
+
+  <script>
+    const now = new Date();
+    document.getElementById('y').textContent = now.getFullYear();
+    document.getElementById('d').textContent = now.toISOString().slice(0,10);
+  </script>
+</body>
+</html>
